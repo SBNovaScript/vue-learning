@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="app">
-        <message
-        v-bind:data="message"
-        v-bind:key="message"
-        ></message>
-        <input v-model="message">
-    </div>
+    <main>
+        <div class="counter">
+            <p>Counter: {{ counter }}</p>
+            <button v-on:click="toggleCount">Toggle Count</button>
+        </div>
+        <div class="content">
+            <p>Content</p>
+        </div>
+    </main>
     <script src="index.js"></script>
 </body>
 </html>
